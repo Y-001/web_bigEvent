@@ -33,12 +33,13 @@ function renderAvatar(user){
     $('#welcome').html(`欢迎&nbsp;&nbsp; ${name}`)
     if(user.user_pic!==null){
         //渲染图片头像
-        $('.layui-nav-img').attr('src',user.user.pic).show()
+        $('.layui-nav-img').attr('src',user.user_pic).show()
         $('.text-avatar').hide()
     }else{
         //渲染文本头像
         $('.layui-nav-img').hide()
-        $('.text-avatar').show()
+        var first=name[0].toUpperCase()
+        $('.text-avatar').html(first).show()
     }
 }
 
